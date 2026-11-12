@@ -1,13 +1,19 @@
 {
-    "name": "back-end",
+    "name": "swati-project-backend",
     "version": "1.0.0",
-    "description": "",
+    "description": "Demo Express API for JWT authentication and TVMaze show search.",
     "main": "index.js",
     "scripts": {
         "start": "node ./index.js",
         "dev": "nodemon ./index.js"
     },
-    "keywords": [],
+    "keywords": [
+        "express",
+        "jwt-authentication",
+        "nodejs",
+        "rest-api",
+        "tvmaze"
+    ],
     "author": "",
     "license": "ISC",
     "devDependencies": {

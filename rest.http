@@ -1,16 +1,11 @@
-### /hello
-GET http://localhost:1198/api/hello
+@baseUrl = http://localhost:1198
+@token = paste-login-token-here
 
-### generate hashed passwords
-POST http://localhost:1198/api/hashed-password
-Content-Type: application/json
+### Health check
+GET {{baseUrl}}/api/hello
 
-{
-    "password": "password3"
-}
-
-### login
-POST http://localhost:1198/api/login
+### Login with a demo account
+POST {{baseUrl}}/api/login
 Content-Type: application/json
 
 {
@@ -18,8 +13,6 @@ Content-Type: application/json
     "password": "password1"
 }
 
-### search
-POST http://localhost:1198/api/search?title=sunday
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQG1haWwuY29tIiwiaWF0IjoxNjkzODk2MjU3LCJleHAiOjE2OTM5MDM0NTd9.MGpRZABN21FhWDnz2C4vOAay9X4jkBrdB8BkgXQ-ObE
-
+### Search TVMaze shows
+POST {{baseUrl}}/api/search?title=sunday
+Authorization: Bearer {{token}}
